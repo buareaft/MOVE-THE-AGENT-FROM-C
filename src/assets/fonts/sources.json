@@ -1,0 +1,11 @@
+{
+  "geistRepository": "https://github.com/vercel/geist-font",
+  "geistCommit": "ef2597cfc42f4797676df105517ccc0a1cfa6569",
+  "notoRepository": "https://github.com/google/fonts/tree/main/ofl/notosanssc",
+  "notoCommit": "86aced91de05cd4f96a06838124cca45be337b2b",
+  "geistSha256": "AFAACC4C5FBBA89D2EBF7A02DC4070208540874592A5504D57175782FE893101",
+  "notoOriginalTtfSha256": "A3041811A78C361B1DE50F953C805E0244951C21C5BD412F7232EF0D899AF0DA",
+  "notoWoff2Sha256": "b837cc845443a8c2701e49263a638d0c6d0bae2438e203418a8c31a9a599da37",
+  "notoGlyphCount": 30890,
+  "conversion": "fonttools 4.68.0; brotli 1.2.1; complete character map, no subset"
+}

@@ -1,0 +1,32 @@
+Move Your Agent 1.5.0 - Windows x64
+
+双击 agent-space.exe。首次启动点击“扫描本机”；之后可读取已有索引。
+需要 WebView2 Runtime，字体已内置；无需 Node、Rust 或系统字体安装。
+
+总览：磁盘筛选、分类容量、Agent 小计。
+项目/对话：搜索、排序、路径复制与定位。
+迁移：退出相关 Agent → 选择已有本地 NTFS 目标目录 → 预览 → 确认。
+迁移后保留原副本；核对后“验证并清理副本”。
+恢复使用目标上的最新数据，需要源盘有足够空间。同盘迁移不释放空间。
+操作中断后可继续/恢复；保持目标盘符不变。
+
+设置：保存默认目标，可选“普通目录”或“虚拟磁盘 VHDX”。
+VHDX：镜像放在 D 盘 → 保存 → 创建并挂载 → 启用自动挂载 → 迁移页确认。
+默认 D:\MoveYourAgent\AgentData.vhdx，动态增长，上限 64 GB，挂载 V:\AgentData。
+虚拟磁盘管理需要当前 Windows 用户的管理员授权。
+原路径的目录联接让后续文件继续写入目标，软件无需常驻。
+重启后先确认磁盘已挂载，再启动 Agent。登录挂载不能保证早于其他自启动程序。
+镜像放在 C 盘不会释放 C 盘实际空间；虚拟容量与镜像所在卷可用空间均有限。
+仍有迁移目录引用时禁止卸载；先在迁移记录中恢复原位置。
+不提供镜像移动、扩容、压缩或删除；备份时一并保留 .lab/agent-space 和镜像侧的所有权记录。
+
+支持固定 Codex 会话、桌面 bin/runtimes、Claude projects 目录。
+DeepSeek Harness：默认 %USERPROFILE%\.dsh，可通过启动程序时的 DSH_HOME 指定根目录。
+识别 JSONL / Zstandard 会话头 v0–v4，迁移 sessions 与 cache；历史代文件合并到所属会话。
+未知格式计入未归属，不执行 Harness 配置、不解析正文、不整体迁移配置/凭据目录。
+迁移前关闭 DeepSeek Harness 和相关 CLI；Node 进程也会保守拦截。
+没有任意目录清理、云端聊天管理或单条数据库会话搬迁。
+CLI 无参数仅显示运行信息；scan 手动扫描，candidates 列出迁移目录。
+本程序数据在便携目录 .lab/agent-space，报告为全部磁盘扫描结果。
+保持 .agent-space-workspace 标记文件与程序同目录。
+字体版权及许可见 THIRD-PARTY-NOTICES.txt。

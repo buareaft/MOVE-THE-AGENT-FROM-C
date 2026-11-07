@@ -1,0 +1,9 @@
+[package]
+name = "agent-space-cli"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+agent-space-core = { path = "../core" }
+anyhow.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,23 @@
+[package]
+name = "agent-space-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+rusqlite.workspace = true
+sha2.workspace = true
+uuid.workspace = true
+fs2 = "0.4"
+base64 = "0.22"
+flate2 = "1"
+zstd = "0.13"
+
+[target.'cfg(windows)'.dependencies]
+junction = "1"
+windows = { version = "0.61", features = ["Win32_Storage_FileSystem", "Win32_Foundation", "Win32_Security_Authorization", "Win32_System_Diagnostics_ToolHelp", "Win32_System_Threading"] }
+
+[dev-dependencies]
+tempfile = "3"
